@@ -1,4 +1,11 @@
 <?php
+
+/** 
+ * @Autor Startsev Maxim
+ * @Copyright 2019
+ * @Description Скрипт проверки аутенифиакции пользователя
+ */
+
 	    include("database.php");
 	    session_start();
 	 

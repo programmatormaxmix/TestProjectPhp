@@ -1,4 +1,10 @@
 <?php
+
+/** 
+ * @Autor Startsev Maxim
+ * @Copyright 2019
+ * @Description Скрипт входа пользователя в личный кабинет
+ */
 	    include("database.php");
 	 
 	    session_start();

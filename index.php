@@ -1,4 +1,10 @@
 <?php
+
+/** 
+ * @Autor Startsev Maxim
+ * @Copyright 2019
+ * @Description Скрипт страница аутетинифакации пользователей
+ */
 	$err = "";
 	    session_start(); 
 	    if(isset($_SESSION['ERRMSG']) &&is_array($_SESSION['ERRMSG']) &&count($_SESSION['ERRMSG']) >0 ) { 

@@ -1,4 +1,11 @@
 <?php
+
+/** 
+ * @Autor Startsev Maxim
+ * @Copyright 2019
+ * @Description Скрипт доступа к базе данных MySql
+ */
+
   $server = "localhost:3306";
   $user = "root";
   $pass = "root";

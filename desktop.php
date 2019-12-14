@@ -1,4 +1,12 @@
 <?php
+
+/** 
+ * @Autor Startsev Maxim
+ * @Copyright 2019
+ * @Description Скрипт личный кабинет пользователя
+ */
+
+
   include("checked.php");
 ?>
 
