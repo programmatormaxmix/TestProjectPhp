@@ -31,6 +31,9 @@
                      $money = $row["money"];
                      $bonus = $row["points"];
                      $loyalty = $row["loyalty"];
+                     $card  = $row["cardnumber"];
+                     $post = $row["state"];
+                     $post .= $row["street"];
                    }
 
 	    } else { 

@@ -10,7 +10,8 @@
   $user = "root";
   $pass = "root";
   $conn = mysqli_connect($server, $user, $pass);
-  $db = mysqli_select_db($conn,"slotsengine");
+  $database = "slotsengine";
+  $db = mysqli_select_db($conn,$database);
   if(!$db) {
             echo "Database not found";
             exit();
