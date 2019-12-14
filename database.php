@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Скрипт доступа к базе данных MySql
+ * @Description Mysql access database script
  */
 
   $server = "localhost:3306";

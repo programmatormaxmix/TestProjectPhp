@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Скрипт выхода пользователя из личного кабинета
+ * @Description Unlogin user script checking
  */
 
   session_start();

@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Скрипт страница аутетинифакации пользователей
+ * @Description Autentification users main page
  */
 	$err = "";
 	    session_start(); 

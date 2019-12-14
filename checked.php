@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Скрипт проверки аутенифиакции пользователя
+ * @Description Authentication users script
  */
 
 	    include("database.php");
@@ -16,10 +16,24 @@
 	    }
 	 
 	    if( isset($_SESSION['USERNAME'])) {
-	        $UID = $_SESSION['UID'];
+	        $uid = $_SESSION['UID'];
 	        $username = $_SESSION['USERNAME'];
                 $qry = "select * from users where login='$username'";
 	        $result = mysqli_query($conn,$qry);
-	        if(mysqli_num_rows($result) != 1) { Destroy(); }
-	    } else { Destroy(); }
+	        if(mysqli_num_rows($result) != 1) { 
+                  Destroy(); 
+                  } else {
+                     $disco = "hello";
+                     $row = mysqli_fetch_assoc($result);
+                     $id= $row["uid"];   
+                     $surname = $row["lastname"];
+                     $name = $row["firstname"];
+                     $money = $row["money"];
+                     $bonus = $row["points"];
+                     $loyalty = $row["loyalty"];
+                   }
+
+	    } else { 
+              Destroy(); 
+              }
 ?>

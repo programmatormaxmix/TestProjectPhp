@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Скрипт входа пользователя в личный кабинет
+ * @Description Login user script checking
  */
 	    include("database.php");
 	 
@@ -50,7 +50,7 @@
 	            $_SESSION['UID'] = $row['UID'];
 	            $_SESSION['USERNAME'] = $username;
 	            session_write_close();
-	            header("location: member.php");
+	            header("location: desktop.php");
 	        }
 
 	    } else {
