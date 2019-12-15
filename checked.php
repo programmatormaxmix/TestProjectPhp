@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Authentication users script
+ * @Description Checker authentication users script
  */
 
 	    include("database.php");
@@ -32,7 +32,7 @@
                      $bonus = $row["points"];
                      $loyalty = $row["loyalty"];
                      $card  = $row["cardnumber"];
-                     $post = $row["state"];
+                     $post = $row["state"] . ", ";
                      $post .= $row["street"];
                    }
 

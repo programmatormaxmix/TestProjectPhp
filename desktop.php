@@ -35,8 +35,8 @@
       <input type="submit" value="Convert money to bonus">	            
     </form>
     <hr>
-    <form action="gamble.php" method="post">
-      <input type="submit" value=">---GAMBLE<---">	            
+    <form action="award.php" method="post">
+      <input type="submit" value="[--->GAMBLE<---]">	            
     </form>
     <hr>
   </body>
