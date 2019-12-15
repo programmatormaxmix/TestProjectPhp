@@ -8,9 +8,29 @@
 
   include("checked.php");
 
-  $description = "100 EUR";
-  $award = "creditmoney";
-  $amount = 100;
+  $sql = "select * from award where uid='$id'";
+  $result = mysqli_query($conn,$sql);
+
+
+  if(mysqli_num_rows($result) > 0) {	       
+
+           $row = mysqli_fetch_assoc($result);
+           $awardid =$row['id'];
+	   $award = $row['type'];
+           $amount = $row['count'];
+           $desc = $row['desc'];
+
+           $sql = "delete from award where id='$awardid'";
+           $result = mysqli_query($conn,$sql);   
+	         	   
+  } else {
+   
+      $award = "creditbonus";
+      $amount = 1; 
+      $desc = "1 BON";
+ 
+  }
+
 
 ?>
 
@@ -22,7 +42,7 @@
     <hr>
     <h1>!!!CONGRATILATIONS!!!</h1>
     <h1>YOU WIN</h1>
-    <h1><?php echo $description ?></h1>
+    <h1><?php echo $desc ?></h1>
     <hr>
     <form action="<?php echo $award?>.php" method="post">
       TAKE A WIN????

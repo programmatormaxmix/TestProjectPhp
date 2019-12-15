@@ -3,18 +3,25 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Creditor money script
+ * @Description Credit money script
  */
 
   include("checked.php");
 
+  $confirm = $_POST["confirm"];
   $amount = $_POST["amount"];
-  $money += $amount;
-  $sql = "update users set money='$money' where uid='$id'";   
-  if (mysqli_query($conn, $sql))  {
-         $message = "Your winnings are credited to your account"; 
+  if ($confirm=="YES") {
+
+    $money += $amount;
+    $sql = "update users set money='$money' where uid='$id'";   
+    if (mysqli_query($conn, $sql))  {
+           $message = "We sent money on you account"; 
+    } else {
+           $message = "Error database connect";
+    }
+
   } else {
-         $message = "Error database connect";
+      $message = "You rejected award"; 
   }
 
 ?>

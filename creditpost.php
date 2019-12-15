@@ -3,7 +3,7 @@
 /** 
  * @Autor Startsev Maxim
  * @Copyright 2019
- * @Description Credit bonus script
+ * @Description Credit post script
  */
 
   include("checked.php");
@@ -13,14 +13,8 @@
 
  if ($confirm=="YES") {
 
-    $bonus += $amount;
-    $sql = "update users set points='$bonus' where uid='$id'";   
-    if (mysqli_query($conn, $sql))  {
-           $message = "We sent bonus on you account"; 
-    } else {
-           $message = "Error database connect";
-    }
-
+      $message = "Package sent to delivery service"; 
+  
   } else {
       $message = "You rejected award"; 
   }
